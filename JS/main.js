@@ -1,5 +1,3 @@
-let num = 0;
-
 async function adviceGenerator() {
     let apiUrl = `https://api.adviceslip.com/advice?timestamp=${new Date().getTime()}`;
     let text = document.querySelector('.text');
@@ -8,13 +6,13 @@ async function adviceGenerator() {
     try {
         const response = await fetch(apiUrl);
         let data = await response.json();
-        num++;
+        console.log(data);
 
        
         let advice = `❝${data.slip.advice}❞`;
         let chars = advice.split(''); 
         text.textContent = ''; 
-        header.textContent = `Advice #${num}`;
+        header.textContent = `Advice #${data.slip.id}`;
         let index = 0;
 
         let interval = setInterval(() => {
