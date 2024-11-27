@@ -163,7 +163,7 @@ body {
 }
 
 .main-btn button:hover {
-    box-shadow: 0 6px 12px rgba(0, 255, 128, 0.5);
+    box-shadow: 0 0 12px var(--Neon-Green);
 }
 
 .divide-img img {
